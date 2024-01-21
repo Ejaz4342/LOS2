@@ -1,0 +1,17 @@
+nav {
+			background-color: #eee;
+			display: flex;
+			justify-content: center;
+		}
+
+		nav a {
+			text-decoration: none;
+			color: #333;
+			padding: 1em;
+			display: inline-block;
+			transition: background-color 0.3s;
+		}
+
+		nav a:hover {
+			background-color: #ddd;
+		}

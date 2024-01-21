@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Thymeleaf with Spring Boot</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" th:href="@{/css/header.css}" />
+	<link rel="stylesheet" type="text/css" th:href="@{/css/navbar.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/body.css}" />
+   
+</head>
+<body>
+    <h1 th:text="${message}">Hello, World!</h1>
+	<div class="form-container">
+    <form action="#" th:action="@{/getlogin}" th:object="${userForm}" method="post">
+        <label for="uname">User Name:</label>
+        <input type="text" id="uname" name="uname" th:field="*{userName}" />
+
+        <label for="pass">Password:</label>
+        <input type="password" id="pass" th:field="*{password}" />
+
+        <button type="submit">Login</button>
+    </form>
+    </div>
+</body>
+</html>
